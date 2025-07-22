@@ -3,13 +3,13 @@
 
 services:
   api:
-    container_name: LibreChat
+    container_name: AIP
     ports:
       - "${PORT}:${PORT}"
     depends_on:
       - mongodb
       - rag_api
-    image: ghcr.io/danny-avila/librechat-dev:latest
+    image: gabrielcorreaoliveira/aip-app:latest
     restart: always
     user: "${UID}:${GID}"
     extra_hosts:
@@ -24,6 +24,9 @@ services:
       - type: bind
         source: ./.env
         target: /app/.env
+      - type: bind
+        source: ./librechat.yaml
+        target: /app/librechat.yaml
       - ./images:/app/client/public/images
       - ./uploads:/app/uploads
       - ./logs:/app/api/logs
