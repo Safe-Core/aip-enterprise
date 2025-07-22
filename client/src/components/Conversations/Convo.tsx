@@ -43,6 +43,8 @@ export default function Conversation({
   const [renaming, setRenaming] = useState(false);
   const [isPopoverActive, setIsPopoverActive] = useState(false);
 
+  console.log('endpointsConfig', endpointsConfig);
+
   const previousTitle = useRef(title);
 
   useEffect(() => {
@@ -177,12 +179,13 @@ export default function Conversation({
           isSmallScreen={isSmallScreen}
           localize={localize}
         >
-          <EndpointIcon
+          {/* Render conversation side icon */}
+          {/* <EndpointIcon
             conversation={conversation}
             endpointsConfig={endpointsConfig}
             size={20}
             context="menu-item"
-          />
+          /> */}
         </ConvoLink>
       )}
       <div

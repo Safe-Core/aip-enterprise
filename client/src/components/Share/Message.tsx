@@ -46,7 +46,7 @@ export default function Message(props: TMessageProps) {
 
   let messageLabel = '';
   if (isCreatedByUser) {
-    messageLabel = 'anonymous';
+    messageLabel = 'Anônimo';
   } else {
     messageLabel = message.sender ?? '';
   }
@@ -68,7 +68,8 @@ export default function Message(props: TMessageProps) {
             <div
               className={cn('relative flex w-11/12 flex-col', isCreatedByUser ? '' : 'agent-turn')}
             >
-              <div className={cn('select-none font-semibold', fontSize)}>{messageLabel}</div>
+              {/* <div className={cn('select-none font-semibold', fontSize)}>{messageLabel}</div> */}
+              <div className={cn('select-none font-semibold', fontSize)}>{messageLabel !== "Anônimo" ? "Consultor" : messageLabel}</div>
               <div className="flex-col gap-1 md:gap-3">
                 <div className="flex max-w-full flex-grow flex-col gap-0">
                   <MessageContext.Provider

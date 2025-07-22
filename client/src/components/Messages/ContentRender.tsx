@@ -159,7 +159,8 @@ const ContentRender = memo(
             msg.isCreatedByUser ? 'user-turn' : 'agent-turn',
           )}
         >
-          <h2 className={cn('select-none font-semibold', fontSize)}>{messageLabel}</h2>
+          {/* <h2 className={cn('select-none font-semibold', fontSize)}>{messageLabel}</h2>*/}
+          <h2 className={cn('select-none font-semibold', fontSize)}>Consultor</h2>
 
           <div className="flex flex-col gap-1">
             <div className="flex max-w-full flex-grow flex-col gap-0">

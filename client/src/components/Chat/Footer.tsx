@@ -37,9 +37,9 @@ export default function Footer({ className }: { className?: string }) {
   const mainContentParts = (
     typeof config?.customFooter === 'string'
       ? config.customFooter
-      : '[LibreChat ' +
+      : '[AIP ' +
         Constants.VERSION +
-        '](https://librechat.ai) - ' +
+        '](https://go.safecore.lat/estado) - ' +
         localize('com_ui_latest_footer')
   ).split('|');
 

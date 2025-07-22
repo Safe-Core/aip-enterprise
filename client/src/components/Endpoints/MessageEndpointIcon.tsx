@@ -28,7 +28,7 @@ function getOpenAIColor(_model: string | null | undefined) {
   if (model && /\b(o\d)\b/i.test(model)) {
     return '#000000';
   }
-  return model.includes('gpt-4') ? '#AB68FF' : '#19C37D';
+  return model.includes('gpt-4') ? '#268672' : '#19C37D';
 }
 
 function getGoogleIcon(model: string | null | undefined, size: number) {
@@ -140,7 +140,7 @@ const MessageEndpointIcon: React.FC<IconProps> = (props) => {
     [EModelEndpoint.openAI]: {
       icon: <GPTIcon size={size * 0.5555555555555556} />,
       bg: getOpenAIColor(model),
-      name: 'ChatGPT',
+      name: 'Unimed',
     },
     [EModelEndpoint.gptPlugins]: {
       icon: <Plugin size={size * 0.7} />,

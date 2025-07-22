@@ -47,7 +47,7 @@ function extractBaseURL(url) {
     'google-ai-studio',
     'google-vertex-ai',
     'grok',
-    'groq',
+    'aip',
     'mistral',
     'openrouter',
     'perplexity-ai',

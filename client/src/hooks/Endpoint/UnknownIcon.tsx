@@ -11,7 +11,7 @@ const knownEndpointAssets = {
   [KnownEndpoints.deepseek]: '/assets/deepseek.svg',
   [KnownEndpoints.fireworks]: '/assets/fireworks.png',
   [KnownEndpoints.google]: '/assets/google.svg',
-  [KnownEndpoints.groq]: '/assets/groq.png',
+  [KnownEndpoints.aip]: '/assets/aip.png',
   [KnownEndpoints.huggingface]: '/assets/huggingface.svg',
   [KnownEndpoints.mistral]: '/assets/mistral.png',
   [KnownEndpoints.mlx]: '/assets/mlx.png',

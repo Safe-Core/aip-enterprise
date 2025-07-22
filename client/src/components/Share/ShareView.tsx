@@ -40,7 +40,7 @@ function SharedView() {
         <div className="final-completion group mx-auto flex min-w-[40rem] flex-col gap-3 pb-6 pt-4 md:max-w-[47rem] md:px-5 lg:px-1 xl:max-w-[55rem] xl:px-5">
           <h1 className="text-4xl font-bold">{data.title}</h1>
           <div className="border-b border-border-medium pb-6 text-base text-text-secondary">
-            {new Date(data.createdAt).toLocaleDateString('en-US', {
+            {new Date(data.createdAt).toLocaleDateString('pt-BR', {
               month: 'long',
               day: 'numeric',
               year: 'numeric',

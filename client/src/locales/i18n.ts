@@ -81,7 +81,7 @@ i18n
       'zh-TW': ['zh-Hant', 'en'],
       'zh-HK': ['zh-Hant', 'en'],
       zh: ['zh-Hans', 'en'],
-      default: ['en'],
+      default: ['pt-BR'],
     },
     fallbackNS: 'translation',
     ns: ['translation'],

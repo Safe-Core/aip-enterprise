@@ -67,32 +67,32 @@ const AttachFileMenu = ({ disabled, conversationId, endpointFileConfig }: Attach
       });
     }
 
-    if (capabilities.fileSearchEnabled) {
-      items.push({
-        label: localize('com_ui_upload_file_search'),
-        onClick: () => {
-          setToolResource(EToolResources.file_search);
-          /** File search is not automatically enabled to simulate legacy behavior */
-          handleUploadClick();
-        },
-        icon: <FileSearch className="icon-md" />,
-      });
-    }
+    // if (capabilities.fileSearchEnabled) {
+    //   items.push({
+    //     label: localize('com_ui_upload_file_search'),
+    //     onClick: () => {
+    //       setToolResource(EToolResources.file_search);
+    //       /** File search is not automatically enabled to simulate legacy behavior */
+    //       handleUploadClick();
+    //     },
+    //     icon: <FileSearch className="icon-md" />,
+    //   });
+    // }
 
-    if (capabilities.codeEnabled) {
-      items.push({
-        label: localize('com_ui_upload_code_files'),
-        onClick: () => {
-          setToolResource(EToolResources.execute_code);
-          setEphemeralAgent((prev) => ({
-            ...prev,
-            [EToolResources.execute_code]: true,
-          }));
-          handleUploadClick();
-        },
-        icon: <TerminalSquareIcon className="icon-md" />,
-      });
-    }
+    // if (capabilities.codeEnabled) {
+    //   items.push({
+    //     label: localize('com_ui_upload_code_files'),
+    //     onClick: () => {
+    //       setToolResource(EToolResources.execute_code);
+    //       setEphemeralAgent((prev) => ({
+    //         ...prev,
+    //         [EToolResources.execute_code]: true,
+    //       }));
+    //       handleUploadClick();
+    //     },
+    //     icon: <TerminalSquareIcon className="icon-md" />,
+    //   });
+    // }
 
     return items;
   }, [capabilities, localize, setToolResource, setEphemeralAgent]);
