@@ -50,7 +50,7 @@ export default function MobileNav({
         </svg>
       </button>
       <h1 className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-center text-sm font-normal">
-        {title ?? localize('com_ui_new_chat')}
+        {title ? localize('com_ui_new_chat') : "Novo chat"}
       </h1>
       <button
         type="button"
