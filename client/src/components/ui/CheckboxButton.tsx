@@ -12,12 +12,13 @@ const CheckboxButton = React.forwardRef<
     checked?: boolean;
     defaultChecked?: boolean;
     isCheckedClassName?: string;
+    onClick?: () => void;
     setValue?: (values: {
       e?: React.ChangeEvent<HTMLInputElement>;
       value: boolean | string;
     }) => void;
   }
->(({ icon, label, setValue, className, checked, defaultChecked, isCheckedClassName }, ref) => {
+>(({ icon, label, setValue, className, checked, defaultChecked, isCheckedClassName, onClick }, ref) => {
   const checkbox = useCheckboxStore();
   const isChecked = useStoreState(checkbox, (state) => state?.value);
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,6 +48,7 @@ const CheckboxButton = React.forwardRef<
       ref={ref}
       store={checkbox}
       onChange={onChange}
+      onClick={onClick}
       className={cn(
         // Base styling from MultiSelect's selectClassName
         'group relative inline-flex items-center justify-center gap-1.5',
