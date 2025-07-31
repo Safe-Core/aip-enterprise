@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot } from 'lucide-react';
+import { BookUser } from 'lucide-react';
 import { isAgentsEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
 import type {
   TModelSpec,
@@ -147,7 +147,7 @@ export function getSelectedIcon({
 
     return (
       selectedEndpoint.icon ||
-      React.createElement(Bot, {
+      React.createElement(BookUser, {
         size: 20,
         className: 'icon-md shrink-0 text-text-primary',
       })
